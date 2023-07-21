@@ -1,0 +1,19 @@
+const card = document.getElementById("card");
+const cardFlipped = document.getElementById("card-back");
+card.addEventListener("click", function () {
+    card.style.transform = "rotateY(20deg)";
+    setTimeout(function () {
+        card.style.display = "none";
+        cardFlipped.style.display = "block";
+        cardFlipped.style.transform = "scale(1.06)";
+    }, 400);
+});
+
+cardFlipped.addEventListener("click", function () {
+    cardFlipped.style.transform = "rotateY(20deg)";
+    setTimeout(function () {
+        cardFlipped.style.display = "none";
+        card.style.display = "block";
+        card.style.transform = "scale(1.06)";
+    }, 400);
+});

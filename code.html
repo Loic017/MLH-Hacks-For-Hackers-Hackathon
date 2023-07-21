@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Programmer Card</title>
+    </head>
+    <body>
+        <div class="navbar">
+            <img src="img/logo.png" alt="" class="logo" />
+            <ul class="links">
+                <li><a href="index.html">My Card</a></li>
+            </ul>
+        </div>
+        <hr class="green-divider" />
+        <div class="heading-code">
+            <h1 class="code-header">
+                Copy and paste the code into your website!
+            </h1>
+            <button id="generate-btn">Generate</button>
+            <p style="text-align: center">Download Tilt Effect Code:</p>
+            <p style="text-align: center">
+                https://github.com/micku7zu/vanilla-tilt.js/blob/master/src/vanilla-tilt.js
+            </p>
+        </div>
+        <div class="code-display">
+            <div class="html">
+                <label for="html-code">HTML</label>
+                <textarea name="" id="html-code" cols="30" rows="10"></textarea>
+            </div>
+            <div class="js">
+                <label for="js-code">JS</label>
+                <textarea name="" id="js-code" cols="30" rows="10"></textarea>
+            </div>
+            <div class="css">
+                <label for="css-code">CSS</label>
+                <textarea name="" id="css-code" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+
+        <script src="app.js"></script>
+        <script src="generateCode.js"></script>
+    </body>
+</html>
