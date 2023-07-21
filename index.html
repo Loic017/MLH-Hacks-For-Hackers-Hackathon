@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Programmer Cards</title>
+    </head>
+    <body>
+        <div class="navbar">
+            <img src="img/logo.png" alt="" class="logo" />
+            <ul class="links">
+                <li><a href="#">My Card</a></li>
+                <li><a href="#">Listings</a></li>
+                <li><a href="#">Post</a></li>
+            </ul>
+        </div>
+        <hr class="green-divider" />
+        <div class="programmer-card">
+            <h1 class="header">Your Programmer Card</h1>
+            <div class="card-container">
+                <div class="card-buttons">
+                    <button class="card-buttons" id="copy">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="45"
+                            height="45"
+                            viewBox="0 0 45 45"
+                            fill="none"
+                        >
+                            <rect
+                                width="45"
+                                height="45"
+                                rx="22.5"
+                                fill="#0FFF7F"
+                            />
+                            <path
+                                d="M27.3462 23.5904V28.6788C27.3462 32.9192 25.65 34.6154 21.4096 34.6154H16.3212C12.0808 34.6154 10.3846 32.9192 10.3846 28.6788V23.5904C10.3846 19.35 12.0808 17.6538 16.3212 17.6538H21.4096C25.65 17.6538 27.3462 19.35 27.3462 23.5904Z"
+                                stroke="#292D32"
+                                stroke-width="3"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                            <path
+                                d="M34.6154 16.3212V21.4096C34.6154 25.65 32.9192 27.3462 28.6788 27.3462H27.3461V23.5904C27.3461 19.35 25.65 17.6538 21.4096 17.6538H17.6538V16.3212C17.6538 12.0808 19.35 10.3846 23.5904 10.3846H28.6788C32.9192 10.3846 34.6154 12.0808 34.6154 16.3212Z"
+                                stroke="#292D32"
+                                stroke-width="3"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </button>
+                    <button class="card-buttons" id="edit">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="45"
+                            height="45"
+                            viewBox="0 0 45 45"
+                            fill="none"
+                        >
+                            <rect
+                                width="45"
+                                height="45"
+                                rx="22.5"
+                                fill="#0FFF7F"
+                            />
+                            <path
+                                d="M15.7029 30.3647C15.0164 30.3647 14.3748 30.1283 13.9134 29.6893C13.3281 29.1378 13.0467 28.3049 13.148 27.4045L13.5645 23.7579C13.6432 23.0713 14.0597 22.1597 14.5436 21.6644L23.7841 11.8839C26.0914 9.4415 28.4999 9.37397 30.9423 11.6813C33.3846 13.9885 33.4522 16.3971 31.1449 18.8395L21.9045 28.6201C21.4318 29.1266 20.5538 29.5993 19.8673 29.7119L16.2432 30.3308C16.0518 30.3421 15.883 30.3647 15.7029 30.3647ZM27.3969 11.67C26.5303 11.67 25.7762 12.2102 25.0109 13.0206L15.7704 22.8126C15.5453 23.0489 15.2865 23.6117 15.2415 23.9381L14.825 27.5846C14.78 27.956 14.87 28.2599 15.0726 28.4513C15.2752 28.6426 15.5791 28.7101 15.9505 28.6538L19.5747 28.0349C19.9011 27.9787 20.4413 27.6859 20.6664 27.4496L29.9068 17.669C31.3024 16.1833 31.8089 14.8102 29.7718 12.8968C28.8714 12.0302 28.0948 11.67 27.3969 11.67Z"
+                                fill="#292D32"
+                            />
+                            <path
+                                d="M28.9843 20.7188C28.9618 20.7188 28.9281 20.7188 28.9055 20.7188C25.394 20.3699 22.5689 17.7025 22.0287 14.2134C21.9612 13.752 22.2763 13.3243 22.7378 13.2455C23.1992 13.178 23.6269 13.4931 23.7057 13.9546C24.1334 16.6783 26.3394 18.7717 29.0856 19.0419C29.5471 19.0869 29.8847 19.5033 29.8397 19.9647C29.7834 20.3924 29.412 20.7188 28.9843 20.7188Z"
+                                fill="#292D32"
+                            />
+                            <path
+                                d="M33.1032 34H12.8441C12.3827 34 12 33.6173 12 33.1559C12 32.6944 12.3827 32.3118 12.8441 32.3118H33.1032C33.5647 32.3118 33.9474 32.6944 33.9474 33.1559C33.9474 33.6173 33.5647 34 33.1032 34Z"
+                                fill="#292D32"
+                            />
+                        </svg>
+                    </button>
+                </div>
+                <div
+                    id="card"
+                    class="card"
+                    style="
+                        background: rgb(5, 200, 96);
+                        background: linear-gradient(
+                            199deg,
+                            rgba(5, 200, 96, 1) 16%,
+                            rgba(11, 195, 97, 1) 57%,
+                            rgba(0, 41, 19, 1) 100%
+                        );
+                    "
+                    data-tilt
+                    data-tilt-glare
+                    data-tilt-max-glare="0.8"
+                    data-tilt-reverse="true"
+                    data-tilt-scale="1.1"
+                >
+                    <h2 id="card-name" class="card-name">John</h2>
+                    <p id="card-title" class="card-title">Software Engineer</p>
+                </div>
+                <div
+                    class="card"
+                    id="card-back"
+                    style="
+                        background: rgb(1, 48, 23);
+                        background: linear-gradient(
+                            199deg,
+                            rgb(2, 69, 33) 16%,
+                            rgb(3, 61, 30) 57%,
+                            rgba(0, 41, 19, 1) 100%
+                        );
+                        display: none;
+                    "
+                    data-tilt
+                    data-tilt-glare
+                    data-tilt-max-glare="0.8"
+                    data-tilt-reverse="true"
+                    data-tilt-scale="1.1"
+                >
+                    <h2 id="back-name" class="popout-name">John</h2>
+                    <p id="back-title" class="popout-title">
+                        Software Engineer
+                    </p>
+                    <h2 class="technologies-popout-header">Technologies</h2>
+                    <p id="back-technologies">HTML, CSS, JavaScript</p>
+                    <h2 class="links-popout-header">Links</h2>
+                    <div class="links-popout">
+                        <a id="back-linkedin" href="#">LinkedIn</a>
+                        <a id="back-github" href="#">GitHub</a>
+                        <a id="back-twitter" href="#">Twitter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="edit-card-container" style="display: none" id="edit-card">
+            <button id="close">X</button>
+            <h1 class="header">Edit Your Card</h1>
+            <div class="form">
+                <label for="name">Name</label>
+                <input type="text" id="name" />
+                <label for="name">Role / Title</label>
+                <input type="text" id="title" />
+                <label for="name">Technologies</label>
+                <input type="text" id="technologies" />
+                <label for="name">LinkedIn</label>
+                <input type="text" id="linkedin" />
+                <label for="name">GitHub</label>
+                <input type="text" id="github" />
+                <label for="name">Twitter</label>
+                <input type="text" id="twitter" />
+                <button id="submit-edit">Submit</button>
+            </div>
+        </div>
+    </body>
+
+    <script src="app.js"></script>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+</html>
