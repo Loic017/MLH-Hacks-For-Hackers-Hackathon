@@ -126,9 +126,10 @@ h2 {
 }
 
 #card-back {
-    width: 334px;
+    max-width: 334px;
     height: 300px;
     transition: transform 500ms;
+    overflow: hidden;
 }
 
 #card-back h2 {
@@ -137,9 +138,13 @@ h2 {
 }
 
 #card-back a {
-    margin-top: 20px;
     font-size: 16px;
     padding: 0 35px;
+}
+
+.links-popout {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .edit-card-container {

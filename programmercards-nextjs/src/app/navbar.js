@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "./logo.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const NavigationBar = () => {
     return (
@@ -10,10 +11,10 @@ const NavigationBar = () => {
             </a>
             <ul class="links">
                 <li>
-                    <a href="index.html">My Card</a>
+                    <Link href="/">My Card</Link>
                 </li>
                 <li>
-                    <a href="index.html">Marketplace</a>
+                    <Link href="/marketplace">Marketplace</Link>
                 </li>
             </ul>
         </div>

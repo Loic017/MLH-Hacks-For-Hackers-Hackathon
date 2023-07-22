@@ -1,25 +1,42 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Tilt } from "react-tilt";
 
-const defaultOptions = {
-    reverse: true, // reverse the tilt direction
-    max: 25, // max tilt rotation (degrees)
-    perspective: 1000, // Transform perspective, the lower the more extreme the tilt gets.
-    scale: 1, // 2 = 200%, 1.5 = 150%, etc..
-    speed: 200, // Speed of the enter/exit transition
-    transition: false, // Set a transition on enter/exit.
-    axis: null, // What axis should be disabled. Can be X or Y.
-    reset: true, // If the tilt effect has to be reset on exit.
-    easing: "cubic-bezier(.03,.98,.52,.99)", // Easing on enter/exit.
-};
-
 const CardComponent = () => {
+    const defaultOptions = {
+        reverse: false, // reverse the tilt direction
+        max: 25, // max tilt rotation (degrees)
+        perspective: 1000, // Transform perspective, the lower the more extreme the tilt gets.
+        scale: 1, // 2 = 200%, 1.5 = 150%, etc..
+        speed: 200, // Speed of the enter/exit transition
+        transition: false, // Set a transition on enter/exit.
+        axis: null, // What axis should be disabled. Can be X or Y.
+        reset: false, // If the tilt effect has to be reset on exit.
+        easing: "cubic-bezier(.03,.98,.52,.99)", // Easing on enter/exit.
+    };
+
+    const flipCard1 = () => {
+        document.getElementById("click-text").style.transform = "scale(0)";
+        setTimeout(() => {
+            document.getElementById("card-back").style.transform = "scale(1)";
+        }, 50);
+    };
+    const flipCard2 = () => {
+        document.getElementById("card-back").style.transform = "scale(0)";
+        document.getElementById("click-text").style.transform = "scale(0)";
+        setTimeout(() => {
+            document.getElementById("card").style.transform = "scale(1)";
+            document.getElementById("card").style.visibility = "visible";
+            document.getElementById("click-text").style.transform = "scale(0)";
+        }, 50);
+    };
+
     return (
         <div className="cardComponent">
             <Tilt options={defaultOptions}>
                 <div
                     id="card"
+                    onClick={flipCard1}
                     className="card"
                     style={{
                         background: "rgb(5, 200, 96)",
@@ -55,17 +72,20 @@ const CardComponent = () => {
             <Tilt options={defaultOptions}>
                 <div
                     className="card"
+                    onClick={flipCard2}
                     id="card-back"
                     style={{
                         background: "rgb(1, 48, 23)",
                         backgroundImage:
                             "linear-gradient(199deg, rgb(2, 69, 33) 16%, rgb(3, 61, 30) 57%, rgba(0, 41, 19, 1) 100%)",
-                        display: "none",
+                        transform: "scale(0)",
                     }}
                 >
-                    <h2 id="back-name" className="popout-name">
-                        John
-                    </h2>
+                    <div className="top-back">
+                        <h2 id="back-name" className="popout-name">
+                            John
+                        </h2>
+                    </div>
                     <p id="back-title" className="popout-title">
                         Software Engineer
                     </p>
