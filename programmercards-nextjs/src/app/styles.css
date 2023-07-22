@@ -405,3 +405,80 @@ footer p {
 .footermarket {
     margin-top: 5px;
 }
+
+.NavLink {
+    border-bottom: 2px solid #26292b;
+    transition: transform 0.2s ease-in-out;
+    padding-bottom: 2px;
+}
+
+.NavLink:hover {
+    border-bottom: 2px solid #ffffff;
+    transform: scale(1.1);
+}
+
+.post-card {
+    display: flex;
+    flex-direction: column;
+    /* margin: 0 auto; */
+    width: 500px;
+    height: 700px;
+    gap: 10px;
+    margin-top: 20px;
+    background-color: #0fff7f26;
+    padding: 10px 30px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.submit {
+    width: 100px;
+    align-self: flex-end;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    font-size: 24px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    margin-top: 10px;
+}
+
+.submit:hover {
+    border-bottom: 2px solid #fff;
+}
+
+.post-card p {
+    margin-left: 20px;
+}
+
+.post-card input {
+    border: none;
+    border-radius: 10px;
+    height: 35px;
+    padding: 2px 10px;
+}
+
+.post-card input:focus {
+    outline: none;
+    box-shadow: 0 0 5px #0fff7f;
+}
+
+.create-post-container {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-side-create-post {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 10px;
+    background-color: #ffffff;
+    height: 700px;
+    margin-top: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}

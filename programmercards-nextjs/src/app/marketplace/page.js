@@ -7,7 +7,6 @@ export default function Home() {
     if (status === "authenticated") {
         return (
             <div className="marketplace-container">
-                <h1>Marketplace</h1>
                 <div className="filters">
                     <p>Filters</p>
                     <form action="">

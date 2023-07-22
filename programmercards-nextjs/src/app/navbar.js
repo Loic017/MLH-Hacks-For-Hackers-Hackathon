@@ -16,10 +16,19 @@ const NavigationBar = () => {
                 </a>
                 <ul class="links">
                     <li>
-                        <Link href="/">My Card</Link>
+                        <Link className="NavLink" href="/">
+                            My Card
+                        </Link>
                     </li>
                     <li>
-                        <Link href="/marketplace">Marketplace</Link>
+                        <Link className="NavLink" href="/marketplace">
+                            Marketplace
+                        </Link>
+                    </li>
+                    <li>
+                        <Link className="login" href="/post-card">
+                            Post
+                        </Link>
                     </li>
                     <li>
                         <button
