@@ -1,6 +1,7 @@
 import mongoose, { Schema } from "mongoose";
 
 const postSchema = new Schema({
+    userID: String,
     title: String,
     content: String,
     userName: String,
