@@ -1,11 +1,9 @@
-"use client";
 import styles from "../styles.css";
-import { signIn, useSession, signOut } from "next-auth/react";
+import CardDisplay from "../cards-display";
 
-export default function Home() {
-    const { data: session, status } = useSession();
-    if (status === "authenticated") {
-        return (
+export default async function Home() {
+    return (
+        <div className="page-container">
             <div className="marketplace-container">
                 <div className="filters">
                     <p>Filters</p>
@@ -56,15 +54,76 @@ export default function Home() {
                 </div>
                 <hr className="footerhr footermarket" />
             </div>
-        );
-    } else {
-        return (
-            <div className="marketplaceSignedOut">
-                <h1>Log In to view the Marketplace</h1>
-                <button className="login" onClick={() => signIn("github")}>
-                    Sign In
-                </button>
+            <div className="posts-display">
+                <CardDisplay
+                    post={{
+                        userID: "bob",
+                        title: "Looking for a front-end developer",
+                        content: "Need a front-end developer to join my team",
+                        userName: "John",
+                        userTitle: "Software Engineer",
+                        technology: "Python",
+                        linkedin: "John",
+                        github: "John",
+                        twitter: "John",
+                    }}
+                />
+                <CardDisplay
+                    post={{
+                        userID: "bob",
+                        title: "Need a team for the [name] hackathon.",
+                        content:
+                            "I have python experience, it will be my first hackathon!",
+                        userName: "Paul",
+                        userTitle: "Software Engineer",
+                        technology: "Python",
+                        linkedin: "John",
+                        github: "John",
+                        twitter: "John",
+                    }}
+                />
+                <CardDisplay
+                    post={{
+                        userID: "bob",
+                        title: "Free one on one mentor sessions",
+                        content:
+                            "I would like to select a few programmers to mentor.",
+                        userName: "Emma",
+                        userTitle: "Backend Developer",
+                        technology: "Java",
+                        linkedin: "John",
+                        github: "John",
+                        twitter: "John",
+                    }}
+                />
+                <CardDisplay
+                    post={{
+                        userID: "bob",
+                        title: "Looking to join a team for a project",
+                        content:
+                            "Would like to get collaborative programming experience.",
+                        userName: "Max",
+                        userTitle: "Web Developer",
+                        technology: "HTML, CSS, JavaScript",
+                        linkedin: "John",
+                        github: "John",
+                        twitter: "John",
+                    }}
+                />
+                <CardDisplay
+                    post={{
+                        userID: "bob",
+                        title: "Looking an SEO specialist",
+                        content: "I need help with SEO on my website",
+                        userName: "Jessica",
+                        userTitle: "Web Developer",
+                        technology: "HTML, CSS, JavaScript",
+                        linkedin: "John",
+                        github: "John",
+                        twitter: "John",
+                    }}
+                />
             </div>
-        );
-    }
+        </div>
+    );
 }

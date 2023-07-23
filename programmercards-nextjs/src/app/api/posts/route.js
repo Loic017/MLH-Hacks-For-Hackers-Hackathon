@@ -4,6 +4,7 @@ import Post from "../../../../models/post";
 
 export async function POST(request) {
     const {
+        userID,
         title,
         content,
         userName,
@@ -15,6 +16,7 @@ export async function POST(request) {
     } = await request.json();
     await connectMongoDB();
     await Post.create({
+        userID,
         title,
         content,
         userName,
@@ -29,8 +31,12 @@ export async function POST(request) {
 
 export async function GET() {
     await connectMongoDB();
-    const posts = await Post.find();
-    return NextResponse.json({ posts });
+    try {
+        const posts = await Post.find({});
+        return new Response(JSON.stringify(posts), { status: 200 });
+    } catch (error) {
+        return new Response(JSON.stringify(null), { status: 501 });
+    }
 }
 
 export async function DELETE(request) {

@@ -2,10 +2,10 @@
 import React, { useState } from "react";
 import { Tilt } from "react-tilt";
 
-const CardComponent = () => {
+const CardDisplay = ({ post }) => {
     const defaultOptions = {
         reverse: false, // reverse the tilt direction
-        max: 45, // max tilt rotation (degrees)
+        max: 30, // max tilt rotation (degrees)
         perspective: 1000, // Transform perspective, the lower the more extreme the tilt gets.
         scale: 1, // 2 = 200%, 1.5 = 150%, etc..
         speed: 200, // Speed of the enter/exit transition
@@ -16,18 +16,19 @@ const CardComponent = () => {
     };
 
     const flipCard1 = () => {
-        document.getElementById("click-text").style.transform = "scale(0)";
         setTimeout(() => {
-            document.getElementById("card-back").style.transform = "scale(1)";
+            document.getElementById(
+                `card-back-${post.userName}`
+            ).style.transform = "scale(1)";
         }, 50);
     };
     const flipCard2 = () => {
-        document.getElementById("card-back").style.transform = "scale(0)";
-        document.getElementById("click-text").style.transform = "scale(0)";
+        document.getElementById(`card-back-${post.userName}`).style.transform =
+            "scale(0)";
+
         setTimeout(() => {
             document.getElementById("card").style.transform = "scale(1)";
             document.getElementById("card").style.visibility = "visible";
-            document.getElementById("click-text").style.transform = "scale(0)";
         }, 50);
     };
 
@@ -45,35 +46,41 @@ const CardComponent = () => {
                     }}
                 >
                     <h2 id="card-name" className="card-name">
-                        John
+                        {post.userName}
                     </h2>
                     <p id="card-title" className="card-title">
-                        Software Engineer
+                        {post.userTitle}
                     </p>
                 </div>
             </Tilt>
 
-            <div className="click-on-me" id="click-text">
-                <p>Click on me</p>
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="33"
-                    height="17"
-                    viewBox="0 0 33 17"
-                    fill="none"
+            <div className="post-details">
+                <h2
+                    style={{
+                        fontSize: "16px",
+                        marginTop: "10px",
+                    }}
+                    id="card-title"
+                    className="post-title"
                 >
-                    <path
-                        d="M0.833333 3C0.833333 4.47276 2.02724 5.66667 3.5 5.66667C4.97276 5.66667 6.16667 4.47276 6.16667 3C6.16667 1.52724 4.97276 0.333333 3.5 0.333333C2.02724 0.333333 0.833333 1.52724 0.833333 3ZM33 8.5L27.6991 10.7877L32.3307 14.2346L33 8.5ZM3.02415 3.1535C7.53929 17.1504 22.5434 20.5155 30.6649 12.4659L29.9609 11.7556C22.4566 19.1936 8.30104 16.2546 3.97585 2.8465L3.02415 3.1535Z"
-                        fill="white"
-                    />
-                </svg>
+                    {post.title}
+                </h2>
+                <p
+                    style={{
+                        fontSize: "13px",
+                        padding: "4px 0",
+                        marginBottom: "10px",
+                    }}
+                >
+                    {post.content}
+                </p>
             </div>
 
             <Tilt options={defaultOptions}>
                 <div
                     className="card card-back"
                     onClick={flipCard2}
-                    id="card-back"
+                    id={`card-back-${post.userName}`}
                     style={{
                         background: "rgb(1, 48, 23)",
                         backgroundImage:
@@ -83,14 +90,14 @@ const CardComponent = () => {
                 >
                     <div className="top-back">
                         <h2 id="back-name" className="popout-name">
-                            John
+                            {post.userName}
                         </h2>
                     </div>
                     <p id="back-title" className="popout-title">
-                        Software Engineer
+                        {post.userTitle}
                     </p>
                     <h2 className="technologies-popout-header">Technologies</h2>
-                    <p id="back-technologies">HTML, CSS, JavaScript</p>
+                    <p id="back-technologies">{post.technology}</p>
                     <h2 className="links-popout-header">Links</h2>
                     <div className="links-popout">
                         <a id="back-linkedin" href="#">
@@ -109,4 +116,4 @@ const CardComponent = () => {
     );
 };
 
-export default CardComponent;
+export default CardDisplay;

@@ -125,19 +125,19 @@ h2 {
     z-index: -1;
 }
 
-#card-back {
+.card-back {
     max-width: 334px;
     height: 300px;
     transition: transform 500ms;
     overflow: hidden;
 }
 
-#card-back h2 {
+.card-back h2 {
     margin-top: 20px;
     font-size: 24px;
 }
 
-#card-back a {
+.card-back a {
     font-size: 16px;
     padding: 0 35px;
 }
@@ -228,7 +228,8 @@ h2 {
     color: #fff;
     transform: rotate(-30deg);
     position: absolute;
-    top: 56%;
+    z-index: 10;
+    top: 51%;
     left: 40%;
 }
 
@@ -361,7 +362,7 @@ footer p {
     flex-direction: column;
     text-align: center;
     height: 500px;
-    width: 600px;
+    width: 1000px;
     align-items: center;
     justify-content: center;
     border: 2px solid #0fff7f;
@@ -380,7 +381,7 @@ footer p {
     justify-content: center;
     margin: 0 auto;
     border-radius: 30px;
-    margin-top: 50px;
+    margin-top: 15px;
     gap: 10px;
 }
 
@@ -481,4 +482,15 @@ footer p {
     margin-top: 20px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+}
+
+.posts-display {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 10px;
+    height: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px 0px;
 }

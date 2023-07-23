@@ -17,7 +17,7 @@ const NavigationBar = () => {
                 <ul class="links">
                     <li>
                         <Link className="NavLink" href="/">
-                            My Card
+                            Home
                         </Link>
                     </li>
                     <li>
@@ -58,7 +58,7 @@ const NavigationBar = () => {
             </a>
             <ul class="links">
                 <li>
-                    <Link href="/">My Card</Link>
+                    <Link href="/">Home</Link>
                 </li>
                 <li>
                     <Link href="/marketplace">Marketplace</Link>
