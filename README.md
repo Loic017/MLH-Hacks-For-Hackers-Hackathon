@@ -12,11 +12,20 @@
 ## What is Programmer Card?
 A marketplace for programmers to find other programmers featuring an interactive business card "programmer card" system. Create a post or search the marketplace for your next co-founder, team project, hackathon, mentor and more.
 
-## Features
-
 - Sign in with GitHub
-- Create a Programmer Card Post
-- View other Programmer Card Posts
+- Create a Programmer Card
+- View other Programmer Card
+
+## Technologies
+Next.js app with a MongoDB database. Utilising Next-Auth for user authentication and Tilt.js for programmer card components. Hosted on Vercel.
+Designed with Figma.
+
+## Screenshots
+
+<img width="1276" alt="Home1" src="https://github.com/Loic017/MLH-Hacks-For-Hackers-Hackathon/assets/105462797/8a4f31fa-c74c-449c-a4ca-46c6563b36f9">
+<img width="1279" alt="Home2" src="https://github.com/Loic017/MLH-Hacks-For-Hackers-Hackathon/assets/105462797/3ee294d0-ad02-4345-ad02-67aa85efea01">
+<img width="1280" alt="Marketplace Logged In" src="https://github.com/Loic017/MLH-Hacks-For-Hackers-Hackathon/assets/105462797/c2f96b56-dd3d-4978-8c94-06221f522cac">
+<img width="1280" alt="Post" src="https://github.com/Loic017/MLH-Hacks-For-Hackers-Hackathon/assets/105462797/1213ef31-9742-4799-abff-024e7e97d313">
 
 ## Demo Video
 
