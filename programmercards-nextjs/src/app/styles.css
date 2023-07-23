@@ -423,11 +423,10 @@ footer p {
     flex-direction: column;
     /* margin: 0 auto; */
     width: 500px;
-    height: 700px;
+    height: 600px;
     gap: 10px;
     margin-top: 20px;
-    background-color: #0fff7f26;
-    padding: 10px 30px;
+    padding: 0 30px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
@@ -478,8 +477,8 @@ footer p {
     gap: 10px;
     width: 10px;
     background-color: #ffffff;
-    height: 700px;
-    margin-top: 20px;
+    height: 600px;
+    margin-top: 45px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
