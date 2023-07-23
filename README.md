@@ -10,7 +10,8 @@
 # Programmer Card
 
 ## What is Programmer Card?
-A marketplace for programmers to find other programmers featuring an interactive business card "programmer card" system. Create a post or search the marketplace for your next co-founder, team project, hackathon, mentor and more.
+*Created For MLH Hacks for Hackers Hackathon*
+A marketplace for programmers to find other programmers featuring an interactive business cards "programmer card" system. Create a post or search the marketplace for your next co-founder, team project, hackathon, mentor and more.
 
 - Sign in with GitHub
 - Create a Programmer Card
